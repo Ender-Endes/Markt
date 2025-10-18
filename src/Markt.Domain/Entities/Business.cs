@@ -15,8 +15,8 @@ public class Business
     public string About { get; set; } = string.Empty;
 
     public User User { get; set; } = default!;
-    // not: burası her zaman dolu çünkü her business mutlaka bir user'a bağlı olmalı
-    // sahipsiz business olmaz
+    // burası her zaman dolu çünkü her business mutlaka bir user'a bağlı olmalı
+    // sahipsiz business olmamalı
     public List<Product> Products { get; set; } = new();
     // işletmenin product listesi (varsayılan boş başlar)
 }
