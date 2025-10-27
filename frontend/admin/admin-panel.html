@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Panel</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../app.css" />
+</head>
+<body>
+  <div class="topbar">
+    <strong>Admin Panel</strong>
+    <div class="spacer"></div>
+    <a href="../index.html"><button>Home</button></a>
+    <button id="a-logout" style="margin-left:8px">Logout</button>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <h2>Pending Businesses</h2>
+      <div class="row">
+        <button id="btn-load">Load Pending</button>
+      </div>
+      <ul id="biz-list" class="list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Reports</h2>
+      <div class="row">
+        <button id="btn-reports">Load Reports</button>
+      </div>
+      <div class="grid-2">
+        <div>
+          <h3>Top Offered (en çok teklif alan)</h3>
+          <ul id="r-top-offered" class="list"></ul>
+        </div>
+        <div>
+          <h3>Top Offerers (en çok teklif veren)</h3>
+          <ul id="r-top-offerers" class="list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../api.js"></script>
+  <script src="admin-panel.js"></script>
+</body>
+</html>

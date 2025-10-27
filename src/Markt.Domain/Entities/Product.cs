@@ -13,5 +13,6 @@ public class Product
     public decimal Price { get; set; }
 
     public Business Business { get; set; } = default!;
-    // nullable değil, her ürün bir işletmeye ait olmak zorunda
+
+
 }

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Markt — Panel</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div class="topbar">
+    <strong>Markt Panel</strong>
+    <div class="spacer"></div>
+    <a href="./home.html"><button>Home (Feed)</button></a>
+  </div>
+
+  <main class="container">
+    <section id="signup-section" class="card">
+  <h2>Sign up</h2>
+  <div class="row">
+    <input id="su-display" placeholder="display name" />
+    <input id="su-email" placeholder="email" />
+    <input id="su-pass" placeholder="password" type="password" />
+    <button id="btn-signup">Register</button>
+  </div>
+  <button id="btn-to-login">I am already a member</button>
+</section>
+
+<section id="login-section" class="card" style="display:none">
+  <h2>Login</h2>
+  <div class="row">
+    <input id="email" placeholder="email" />
+    <input id="password" placeholder="password" type="password" />
+    <button id="btn-login">Login</button>
+  </div>
+  <button id="btn-to-signup">Create an account</button>
+</section>
+  <a href="./admin/admin.html"><button>I am the admin</button></a>
+
+  </main>
+
+  <script src="api.js"></script>
+  <script src="auth.js" defer ></script>
+  <script src="products.js"></script>
+</body>
+</html>

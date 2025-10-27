@@ -1,4 +1,3 @@
-// ProductConfig.cs
 using Markt.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -12,5 +11,10 @@ public class ProductConfig : IEntityTypeConfiguration<Product>
         builder.Property(x => x.Price).HasColumnType("decimal(18,2)");
         builder.Property(x => x.Title).HasMaxLength(200).IsRequired();
         builder.HasIndex(x => x.Title);
+
+        builder.HasOne(p => p.Business)
+            .WithMany(biz => biz.Products)
+            .HasForeignKey(p => p.BusinessId)
+            .OnDelete(DeleteBehavior.Restrict); 
     }
 }
